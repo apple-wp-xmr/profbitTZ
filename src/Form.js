@@ -6,12 +6,13 @@ import Element from './components/Element';
 const SECCESS = 'success';
 const ERROR = 'error';
 
-function submit(e, status) {
-  e.preventDefault();
-}
-
 export const Form = () => {
   const { setQuery, elements, message } = useContext(AppContext);
+
+  function submit(e, status) {
+    e.preventDefault();
+    console.log(elements);
+  }
 
   return (
     <form className='container main-form' noValidate>

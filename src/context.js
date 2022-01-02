@@ -12,25 +12,23 @@ const AppProvider = ({ children }) => {
     setElements(formJSON);
   }, [formJSON]);
 
-  console.log(elements);
   const handleChange = (id, event) => {
-    // const newElements = { ...elements };
-    // console.log(newElements);
-    // newElements.forEach((field) => {
-    //   console.log(field);
-    //   const { type, name } = field;
-    //   if (id === name) {
-    //     switch (type) {
-    //       case 'checkbox':
-    //         field['field_value'] = event.target.checked;
-    //         break;
-    //       default:
-    //         field['field_value'] = event.target.value;
-    //         break;
-    //     }
-    //   }
-    //   setElements(newElements);
-    // });
+    const newElements = [...elements];
+    console.log(newElements);
+    newElements.forEach((field) => {
+      const { type, name } = field;
+      if (id === name) {
+        switch (type) {
+          case 'checkbox':
+            field['field_value'] = event.target.checked;
+            break;
+          default:
+            field['field_value'] = event.target.value;
+            break;
+        }
+      }
+      setElements(newElements);
+    });
   };
 
   return (

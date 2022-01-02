@@ -25,6 +25,7 @@ const Email = ({
         placeholder={field_placeholder}
         required={field_requierd}
         value={field_value}
+        onChange={(event) => handleChange(field_id, event)}
       />
       {field_errors ? (
         <div className='invalid-feedback'>{field_errors}</div>

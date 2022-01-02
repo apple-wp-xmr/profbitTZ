@@ -24,6 +24,7 @@ const Textarea = ({
         placeholder={field_placeholder}
         required={field_requierd}
         value={field_value}
+        onChange={(event) => handleChange(field_id, event)}
       ></textarea>
     </div>
   );

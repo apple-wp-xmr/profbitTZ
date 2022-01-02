@@ -29,7 +29,12 @@ const Select = ({
       <label className='mb-2' htmlFor={field_id}>
         {field_label}
       </label>
-      <select className='form-control ' id={field_id} required={field_requierd}>
+      <select
+        className='form-control '
+        id={field_id}
+        required={field_requierd}
+        onChange={(event) => handleChange(field_id, event)}
+      >
         {field_value ? null : <option value=''>{field_placeholder}</option>}
         {field_options.map((element, i) => {
           return (
