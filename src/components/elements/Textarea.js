@@ -8,7 +8,7 @@ const Textarea = ({
   field_label,
   field_name,
   field_type,
-  field_value,
+  value,
   field_errors,
 }) => {
   const { handleChange } = useContext(AppContext);
@@ -23,7 +23,7 @@ const Textarea = ({
         rows={3}
         placeholder={field_placeholder}
         required={field_requierd}
-        value={field_value}
+        value={value}
         onChange={(event) => handleChange(field_id, event)}
       ></textarea>
     </div>

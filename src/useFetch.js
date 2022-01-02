@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 const endpoint = `backend/`;
 
 export const useFetch = (urlParams) => {
   const [data, setData] = useState({});
-
-  const table = {
-    form: 'customer-message-form.json',
-    success: 'customer-message-form-success.json',
-    error: 'customer-message-form-error.json',
-  };
 
   const fetchData = async (url) => {
     try {
@@ -24,6 +18,11 @@ export const useFetch = (urlParams) => {
   };
 
   useEffect(() => {
+    const table = {
+      form: 'customer-message-form.json',
+      success: 'customer-message-form-success.json',
+      error: 'customer-message-form-error.json',
+    };
     fetchData(`${endpoint}${table[urlParams]}`);
   }, [urlParams]);
 

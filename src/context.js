@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useFetch } from './useFetch';
 
 const AppContext = React.createContext();
@@ -14,16 +14,15 @@ const AppProvider = ({ children }) => {
 
   const handleChange = (id, event) => {
     const newElements = [...elements];
-    console.log(newElements);
     newElements.forEach((field) => {
       const { type, name } = field;
       if (id === name) {
         switch (type) {
           case 'checkbox':
-            field['field_value'] = event.target.checked;
+            field['value'] = event.target.checked;
             break;
           default:
-            field['field_value'] = event.target.value;
+            field['value'] = event.target.value;
             break;
         }
       }

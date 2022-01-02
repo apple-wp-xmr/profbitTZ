@@ -11,7 +11,6 @@ const Element = ({ field }) => {
     name,
     type,
     errors,
-    field_value,
     value,
     options,
   } = field;
@@ -26,7 +25,7 @@ const Element = ({ field }) => {
           field_label={label}
           field_name={name}
           field_type={type}
-          field_value={field_value}
+          value={value}
           field_errors={errors}
         />
       );
@@ -39,7 +38,7 @@ const Element = ({ field }) => {
           field_label={label}
           field_name={name}
           field_type={type}
-          field_value={field_value}
+          value={value}
           field_errors={errors}
         />
       );
@@ -52,7 +51,7 @@ const Element = ({ field }) => {
           field_label={label}
           field_name={name}
           field_type={type}
-          field_value={field_value}
+          value={value}
           field_errors={errors}
           field_options={options}
         />
@@ -66,7 +65,7 @@ const Element = ({ field }) => {
           field_label={label}
           field_name={name}
           field_type={type}
-          field_value={field_value}
+          value={value}
           field_errors={errors}
           field_options={options}
         />

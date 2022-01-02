@@ -8,7 +8,7 @@ const Email = ({
   field_label,
   field_name,
   field_type,
-  field_value,
+  value,
   field_errors,
 }) => {
   const { handleChange } = useContext(AppContext);
@@ -24,7 +24,7 @@ const Email = ({
         aria-describedby='textHelp'
         placeholder={field_placeholder}
         required={field_requierd}
-        value={field_value}
+        value={value}
         onChange={(event) => handleChange(field_id, event)}
       />
       {field_errors ? (

@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from './context';
-import { useFetch } from './useFetch';
 import Element from './components/Element';
 
 const SECCESS = 'success';

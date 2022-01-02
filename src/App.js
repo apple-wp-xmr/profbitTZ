@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { AppContext } from './context';
+import React, { useState } from 'react';
+
 import { Form } from './Form';
 import { Button } from './startButton';
 
