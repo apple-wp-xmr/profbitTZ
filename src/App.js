@@ -4,7 +4,7 @@ import { Form } from './Form';
 import { Button } from './startButton';
 
 function App() {
-  const [startButton, setStartButton] = useState(false);
+  const [startButton, setStartButton] = useState(true);
   if (startButton) {
     return <Button setStartButton={setStartButton}></Button>;
   } else {
